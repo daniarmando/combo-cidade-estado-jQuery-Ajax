@@ -53,7 +53,7 @@ ComboEstadoCidade.Cidade = (function() {
 	function Cidade(estado) {
 		this.comboEstado = estado;
 		this.combo = $('.cidade');
-		this.imgLoading = $('.js-img-loading');		
+		this.spinner = $('.js-spinner');		
 	}
 
 	Cidade.prototype.iniciar = function() {
@@ -103,11 +103,11 @@ ComboEstadoCidade.Cidade = (function() {
 
 	function iniciarRequisicao() {
 		reset.call(this);
-		this.imgLoading.show();
+		this.spinner.show();
 	}
 
 	function finalizarRequisicao() {
-		this.imgLoading.hide();
+		this.spinner.hide();
 	}
 
 	return Cidade;
